@@ -176,7 +176,7 @@ import dj_database_url
 if DEBUG:
 	pass
 else:
-	DATABASES['default'] =  dj_database_url.config(DATABASE_URL)
+	DATABASES['default'] =  dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
