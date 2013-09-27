@@ -13,7 +13,7 @@ def env_var(key, default=None):
 # Django settings for djangoproject project.
 DEBUG = env_var('DJ_DEBUG', False) #Unless env var is set to True, debug is off
 #not working
-DEBUG=False
+DEBUG=True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -70,7 +70,7 @@ MEDIA_ROOT = ''
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -139,7 +139,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'storages'
+    'storages',
+	'cook',
+	'dish',
+	'djangoratings',
 )
 
 # A sample logging configuration. The only tangible logging
